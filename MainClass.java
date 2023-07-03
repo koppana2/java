@@ -1,12 +1,10 @@
-package interfaces;
+package overloading;
 
 public class MainClass {
-	public static void main(String[] args) {
-		Triangle t1 = new Triangle(2, 5, 4, "0.##");
-		System.out.println(t1);
-		Circle f2=new Circle(0.2f,"0.##");
-		System.out.println(f2);
-		
-	}
 
+	public static void main(String[] args) {
+		Addition overloading = new Addition();
+		overloading.add(1,2);
+		System.out.println(overloading);
+	}
 }
