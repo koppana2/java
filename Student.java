@@ -1,59 +1,33 @@
-package constructors;
-
-import java.util.Arrays;
+package inheritance;
 
 public class Student {
-	private int id;
-	private String name;
-	private int[] marks;
+	private int studentId;
+	private String studentName;
 	private static int idGenerator = 101;
 
 	public Student() {
-		id = idGenerator++;
+		studentId = idGenerator++;
 	}
 
-	public Student(String n, int[] m) {
+	public Student(String studentName) {
 		this();
-		name = n;
-		marks = m;
+		this.studentName = studentName;
 	}
 
-	protected void setId(int i) {
-		id = i;
+	public int getStudentId() {
+		return studentId;
 	}
 
-	protected void setName(String n) {
-		name = n;
+	public void setStudentId(int studentId) {
+		this.studentId = studentId;
 	}
 
-	protected void setMarks(int[] m) {
-		marks = m;
+	public String getStudentName() {
+		return studentName;
 	}
 
-	protected int getId() {
-		return id;
+	public void setStudentName(String studentName) {
+		this.studentName = studentName;
 	}
 
-	protected String getName() {
-		return name;
-	}
-
-	protected int[] getMarks() {
-		return marks;
-	}
-
-	public float getPercentage() {
-		int sum = 0;
-		for (int i = 0; i < marks.length; i++) {
-			sum += marks[i];
-		}
-		float percentage = (float) sum / marks.length;
-		return percentage;
-	}
-
-	public String toString() {
-		return "ID :" + id + ", Name : " + name + ", Marks : " + Arrays.toString(marks) + ", Percentage : "
-				+ getPercentage();
-
-	}
 }

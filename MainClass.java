@@ -1,43 +1,20 @@
-package classes_Objects;
+package inheritance;
 
 public class MainClass {
 
 	public static void main(String[] args) {
-		// ClassName ObjectName= new ClassName();
-		Mobile samsung = new Mobile();
+		DEPT_ECE ece1 = new DEPT_ECE("arjun", 75, 78, 74, 85, 82);
+		DEPT_CSE cse1 = new DEPT_CSE("aravind", 75, 78, 74, 85);
+		System.out.println(ece1);
+		DEPT_ECE ece2 = new DEPT_ECE("arun", 75, 78, 74, 85, 82);
+		System.out.println(ece2);
 
-		// Access class Members : objectname.member
-		samsung.RAM = 8;
-		samsung.ROM = 64;
-		samsung.OS = "Android 11";
-		samsung.processor = "Snapdragon 720";
+		ece1.setStudentId(501);
+		System.out.println(ece1);
 
-		System.out.println("RAM : " + samsung.RAM);
-		System.out.println("ROM : " + samsung.ROM);
-		System.out.println("OS : " + samsung.OS);
-		System.out.println("processor : " + samsung.processor);
 
-		samsung.communication();
-		samsung.gaming();
-		samsung.browsing();
+		System.out.println(cse1);
 
-		System.out.println("--------------------------------------------------");
-
-		Mobile iphone = new Mobile();
-
-		iphone.RAM = 4;
-		iphone.ROM = 256;
-		iphone.OS = "ios";
-		iphone.processor = "Bionic";
-
-		System.out.println("RAM : " + iphone.RAM);
-		System.out.println("ROM : " + iphone.ROM);
-		System.out.println("OS : " + iphone.OS);
-		System.out.println("processor : " + iphone.processor);
-
-		iphone.communication();
-		iphone.gaming();
-		iphone.browsing();
 	}
 
 }
