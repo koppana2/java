@@ -1,6 +1,7 @@
-package abstraction;
+package interfaces;
 
-public class Circle extends Shape {
+public class Circle implements shape{
+	
 	private float radius;
 	private String pattern;
 
@@ -22,18 +23,22 @@ public class Circle extends Shape {
 	}
 
 	public double getArea() {
-		double area = 3.14 * radius * radius;
-		return getFormat(area, pattern);
+		double area = pi * radius * radius;
+		return shape.getFormat(area, pattern);
 	}
 
 	public double getPerimeter() {
-		double perimeter = 2 * 3.14 * radius;
-		return getFormat(perimeter, pattern);
+		double perimeter = 2 * pi * radius;
+		return shape.getFormat(perimeter, pattern);
 	}
 
 	@Override
 	public String toString() {
-		return "Circle [radius=" + radius + ", Area()=" + getArea() + ", Perimeter()=" + getPerimeter() + "]";
+		return "Circle [radius=" + radius + ", pattern=" + pattern + ", Area=" + getArea() + ", Perimeter="
+				+ getPerimeter() + "]";
 	}
 
+	
+
 }
+
