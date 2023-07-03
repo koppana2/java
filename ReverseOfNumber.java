@@ -2,21 +2,24 @@ package while_loop;
 
 import java.util.Scanner;
 
-public class SumOfDigits {
+public class ReverseOfNumber {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("enter number");
 		int num = sc.nextInt();
-		int digit = 0, sum = 0;
+		System.out.println("given number : " + num);
+		int reverse = 0;
 
-		while (num > 0) {
-			digit = num % 10;
-			sum += digit;
+		while (num != 0) {
+			int rem = num % 10;
+			reverse = (reverse * 10) + rem;
 			num /= 10;
 		}
-		System.out.println(sum);
+		System.out.println("reversed number is: " + reverse);
 		sc.close();
+
 	}
 
 }
+

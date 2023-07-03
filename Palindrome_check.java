@@ -2,20 +2,24 @@ package while_loop;
 
 import java.util.Scanner;
 
-public class SumOfDigits {
+public class Palindrome_check {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("enter number");
 		int num = sc.nextInt();
-		int digit = 0, sum = 0;
+		int originalnum = num, rev = 0, rem;
 
 		while (num > 0) {
-			digit = num % 10;
-			sum += digit;
+			rem = num % 10;
+			rev = (rev * 10) + rem;
 			num /= 10;
 		}
-		System.out.println(sum);
+		if (originalnum == rev) {
+			System.out.println("palindrome number");
+		} else {
+			System.out.println("not palindrome number");
+		}
 		sc.close();
 	}
 
